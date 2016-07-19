@@ -32,7 +32,7 @@ app.get('/:date', function (req, res) {
   res.end(JSON.stringify(dateObj));
 });
 
-app.listen(8080);
+app.listen(process.env.PORT || 5000);
 
 // Return a 'naturally' formatted date.
 function naturalDate(date) {
