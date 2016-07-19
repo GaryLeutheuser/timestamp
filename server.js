@@ -1,6 +1,10 @@
 var express = require('express');
 var app = express();
 
+app.get('/', function(req, res) {
+  res.send('Hi there! Simply append your query to the end of the URL.');
+});
+
 app.get('/:date', function (req, res) {
   var dateObj = {};
   
